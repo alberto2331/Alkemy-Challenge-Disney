@@ -45,7 +45,7 @@ public class Pelicula implements Serializable, Comparable<Pelicula>{
 	 *fetch = FetchType.EAGER: 	indica que la inicializacion será temprana. 
 	 						   		Cuando pida un dato de tipo "Pelicula" SI O SI VA A VENIR CON SU GENERO.
 	 *cascade = CascadeType.ALL:	significa que todas las operaciones que realice sobre "Pelicula"
-									que se aplicaran sobre "Genero" tambien.
+									que se aplicaran sobre "Genero" tambien. 25-1
 	 */
 	@JoinColumn(name="genero_id", insertable= false, updatable= false)
 	/*
