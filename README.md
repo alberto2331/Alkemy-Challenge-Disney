@@ -11,8 +11,7 @@ Api Rest Spring Boot
 
 Usuario no registrado: solo puede registrarse e iniciar secion
 
-Usuario Registrado y Logueado : puede ver todas las peliculas / series y personajes cargados en base de datos, la app le proporsiona un JWT que puede ir
-colocando en los headers de Postman para acceder a los distintos End-Points. Si no coloca dicho JWT no tendrá acceso. El mismo dura 10 horas
+Usuario Registrado y Logueado : puede ver todas las peliculas / series y personajes cargados en base de datos, la app le proporciona un JWT. Este debe ir en los headers de Postman para acceder a los distintos End-Points. Si no coloca dicho JWT no tendrá acceso. El mismo dura 10 horas.
 
 Primero se debe postear un genero, luego se puede cargar la película asociada a dicho genero y por ultimo el personaje.
 
