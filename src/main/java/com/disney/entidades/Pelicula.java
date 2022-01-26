@@ -38,30 +38,10 @@ public class Pelicula implements Serializable, Comparable<Pelicula>{
 	private String calificacion;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	//@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	//Un genero puede tener varias peliculas:
-	/*
-	 Siendo:
-	 *fetch = FetchType.EAGER: 	indica que la inicializacion será temprana. 
-	 						   		Cuando pida un dato de tipo "Pelicula" SI O SI VA A VENIR CON SU GENERO.
-	 *cascade = CascadeType.ALL:	significa que todas las operaciones que realice sobre "Pelicula"
-									que se aplicaran sobre "Genero" tambien. 25-1
-	 */
-	@JoinColumn(name="genero_id", insertable= false, updatable= false)
-	/*
-	Con el joinColumn indico como voy a joinear la entidad "Pelicula" con el Genero
-	* insertable= false, updatable= false --> 	le coloco estos atributos porque este atributo lo estoy usando para
-	 											obtener el "Genero" entero
-	* 	Este atributo Genero me sirve para cuando estoy haciendo consultas 
-	 	me traigo TODA la info del Genero y no solo su id
-	 */
+	@JoinColumn(name="genero_id", insertable= false, updatable= false)	
 	private Genero genero;
 
 	@Column(name ="genero_id", nullable = false)
-	/*
-	 el atributo "generoId" se usa para cuando estoy creando una Pelicula no paso el genero entero sino que paso su id
-	 En SQL no se usa camel case por eso le coloco como name="genero_id"
-	 */
 	private String generoId;
 	
 	@Column(name ="deleted")
